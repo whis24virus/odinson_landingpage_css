@@ -68,4 +68,38 @@ alert(isBoss);
 let yourName = prompt("Enter your name",);
 alert(yourName);
 
-//
+// dictionary order comparison
+alert( 'Z' > 'A' ); // true
+alert( 'Glow' > 'Glee' ); // true
+alert( 'Bee' > 'Be' ); // true
+
+//comparison of different types
+alert( '2' > 1 ); // true, string '2' becomes a number 2
+alert( '01' == 1 ); // true, string '01' becomes a number 1
+
+alert( true == 1 ); // true
+alert( false == 0 ); // true
+
+// not strict equality
+alert( 0 == false ); // true
+
+alert( '' == false ); // true
+
+//strict equality comparison without type conversion
+alert( 0 === false ); // false, because the types are different
+// strict inequality for comparison
+alert( 0 !== false ); // true
+
+//if condition
+
+let year1 = prompt("whats you age",);
+if(year1 >= 50 && year1<=100) alert("you old boiiiiiiiiiii");
+else if(year1 > 100) alert("you dead mate");
+else alert("zoomer babe");
+
+// ternary operator
+let accessAllowed = (age > 18) ? true : false;
+
+// Nullish coalescing operator '??'
+
+
