@@ -64,6 +64,8 @@ let isBoss = confirm("are you sure you want to proceed?");
 alert(isBoss);
 
 
-//
+// ask you name
 let yourName = prompt("Enter your name",);
 alert(yourName);
+
+//
