@@ -212,41 +212,64 @@
   
 
 
-  // callback function
+//   // callback function
 
-  function ask(question, yes, no) {
-    if (confirm(question)) yes()
-    else no();
-  }
+//   function ask(question, yes, no) {
+//     if (confirm(question)) yes()
+//     else no();
+//   }
   
-  function showOk() {
-    alert( "You agreed." );
-  }
+//   function showOk() {
+//     alert( "You agreed." );
+//   }
   
-  function showCancel() {
-    alert( "You canceled the execution." );
-  }
+//   function showCancel() {
+//     alert( "You canceled the execution." );
+//   }
   
-  // usage: functions showOk, showCancel are passed as arguments to ask
-  ask("Do you agree?", showOk, showCancel);
+//   // usage: functions showOk, showCancel are passed as arguments to ask
+//   ask("Do you agree?", showOk, showCancel);
 
 
-  //function declared inside a function call || anonymous function call
+//   //function declared inside a function call || anonymous function call
 
-  function ask(question, yes, no) {
-    if (confirm(question)) yes()
-    else no();
-  }
+//   function ask(question, yes, no) {
+//     if (confirm(question)) yes()
+//     else no();
+//   }
   
-  ask(
-    "Do you agree?",
-    function() { alert("You agreed."); },
-    function() { alert("You canceled the execution."); }
-  );
+//   ask(
+//     "Do you agree?",
+//     function() { alert("You agreed."); },
+//     function() { alert("You canceled the execution."); }
+//   );
 
-  summ(2,3);
+//   summ(2,3);
 
-  let summ = function(a, b){ // unusabel before this line
-    alert(2 + 3);
-  }
-  
+//   let summ = function(a, b){ // unusabel before this line
+//     alert(2 + 3);
+//   }
+
+
+
+  // arrow functions  basics let func = (arg1, arg2, ..., argN) => expression;
+
+
+  let sumn = (name, age) => alert(`Your name is ${name} and your age is ${age}`);
+  let double = n => n * 2; // single argument
+  alert(double(3))
+  sumn("Keshav",15);
+  let sayHi = () => alert("hello"); // if no argument
+  sayHi();
+
+  // dynamic function creation using arrow function
+  let age = prompt("your age?",);
+
+  let welcome = (age < 18)? ()=>alert('hello') : () =>alert('greeting');
+
+  welcome();
+//
+
+let ask = (question, yes, no) => confirm(question)? yes() : no();
+ask("do you agree?",() => alert("You agreed."), () => alert("you canceled execution."));
+
