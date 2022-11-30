@@ -255,21 +255,258 @@
   // arrow functions  basics let func = (arg1, arg2, ..., argN) => expression;
 
 
-  let sumn = (name, age) => alert(`Your name is ${name} and your age is ${age}`);
-  let double = n => n * 2; // single argument
-  alert(double(3))
-  sumn("Keshav",15);
-  let sayHi = () => alert("hello"); // if no argument
-  sayHi();
+//   let sumn = (name, age) => alert(`Your name is ${name} and your age is ${age}`);
+//   let double = n => n * 2; // single argument
+//   alert(double(3))
+//   sumn("Keshav",15);
+//   let sayHi = () => alert("hello"); // if no argument
+//   sayHi();
 
-  // dynamic function creation using arrow function
-  let age = prompt("your age?",);
+//   // dynamic function creation using arrow function
+//   let age = prompt("your age?",);
 
-  let welcome = (age < 18)? ()=>alert('hello') : () =>alert('greeting');
+//   let welcome = (age < 18)? ()=>alert('hello') : () =>alert('greeting');
 
-  welcome();
-//
+//   welcome();
+// //
 
-let ask = (question, yes, no) => confirm(question)? yes() : no();
-ask("do you agree?",() => alert("You agreed."), () => alert("you canceled execution."));
+// let ask = (question, yes, no) => confirm(question)? yes() : no();
+// ask("do you agree?",() => alert("You agreed."), () => alert("you canceled execution."));
 
+// //object 
+// let person = {
+//   firstName: "jon",
+//   lastName: 'don',
+//   address: {
+//     buildingNo: "44",
+//     city:"chandigarh",
+//     country:"india"
+//   }
+// };
+// console.log(person.firstName, person.address.buildingNo);
+// console.log(person['lastName'], person['address']['city']);
+// let aff = 8;
+// console.log(""+aff+"helloss");
+
+
+// person.firstName = "don";
+// person.lastName = "jon";
+
+// console.log(person['firstName'], person['lastName']);
+// person.age = 18;
+// delete person.address.buildingNo;
+// console.log('city' in person.address);
+// let member = person;
+// let ccc = person.address;
+// console.log(member.firstName, member.lastName, ccc.city);
+
+
+// // arrays
+
+// let score = new Array(10);
+// let runs = score;
+
+// let arr1 = [20];
+
+// console.log(score.length, runs.length, arr1.length, arr1[0]);
+
+// let a = prompt("Enter a number to add to the end of the array",);
+// arr1.push(+a); // add at the end of an array
+
+// arr1.pop(); // remove array element from the end;
+
+
+// a = prompt("Enter a number to add at the start of the array",);
+// arr1.unshift(+a);  // add at the beginning of array
+
+
+// arr1.shift(); // remove array element from the beginning
+
+
+
+// arr1.indexOf(1); // find index of element;
+
+// for(let key in member){
+//   if(member.key === 'address'){
+    
+//     for(let adds in key){
+//       console.log("hello");
+//       console.log(member.key.adds);
+//     }
+//   }
+//   console.log(member[key]);
+// }
+
+// argument object in function
+
+// function argAdd(){
+//   let sum = '';
+//   for(let i = 0; i < arguments.length; i++){
+//     sum += arguments[i];
+//   }
+//   console.log(sum);
+// }
+
+// argAdd(5,6,7,4,3,6,4,23,345,346,6);
+
+// // storing functions
+// let argfunc = argAdd;
+// let sumstr = argfunc('2','44');
+
+// function compareBy(propertyName) {
+//   return function (a, b) {
+//     let x = a[propertyName],
+//       y = b[propertyName];
+
+//     if (x > y) {
+//       return 1;
+//     } else if (x < y) {
+//       return -1;
+//     } else {
+//       return 0;
+//     }
+//   };
+// }
+
+// let products = [
+//   {name: 'iPhone', price: 900},
+//   {name: 'Samsung Galaxy', price: 850},
+//   {name: 'Sony Xperia', price: 700}
+// ];
+
+// console.table(products);
+
+// products.sort(compareBy('price'));
+//  console.table(products);
+
+// //pass functions as arguments and parameters
+//  function cmToIn(length) {
+//   return length / 2.54;
+// }
+
+// function inToCm(length) {
+//   return length * 2.54;
+// }
+
+// function convert(fn, length) {
+//   return fn(length);
+// }
+
+// let inches = convert(cmToIn, 10);
+// console.log(inches);
+
+// // anonymous function
+
+
+
+// //anon functionassigned 
+// // let show = function() {
+// //   console.log('Anonymous function');
+// // };
+
+// let show = () => console.log("Anonymous function"); // simplified arrowfunction
+
+// show();
+
+
+// //anon function as arguments
+// // setTimeout(function() {
+// //   console.log('Execute later after 1 second')
+// // });
+
+// setTimeout(() => console.log("Execute later after 1 second"));
+
+
+// // imediatly invokin a function
+
+// // (function() {
+// //   console.log('IIFE');
+// // })();
+
+// (() => {
+//   console.log("IIFE");
+// })();
+
+
+// (function(x, y){
+//   console.log(x+y);
+// })(products[1]['price'], products[2]['price']);
+
+
+// // recursivefunction
+
+
+// function recA (x){
+//   let y = x + 1;
+// if(x == 11){
+//   console.log(x);
+// }
+// else recA(y);
+// }
+
+// recA(0);
+
+
+
+///object An object is a collection of key/value pairs or properties. When the value is a function, the property becomes a method. Typically, you use methods to describe the object behaviors.
+
+
+let person = {
+  firstName: 'keshav',
+  lastName: 'Mehta',
+  greet(){console.log("yo yo ma" + " " + this.firstName)},
+}
+person.greet();
+
+person.greet = () => {console.log("yo ma"+" "+this.lastName)
+};
+
+person.greet();
+
+//create objects with constructor
+
+function Cars(name, power, type){
+  this.name = name;
+  this.power = power;
+  this.type = type;
+}
+
+let audi = new Cars('r8','770','supercar');
+console.log(audi['name']);
+let lamborghini = new Cars('aventador','1000','hypercar');
+console.log(lamborghini['name']);
+audi.classs = () => {
+  console.log(audi['name']+" "+audi['power']+" "+audi['type']);
+}
+audi.classs();
+
+
+
+
+
+
+//constructor function to create and object
+function Truck(brand) {
+  this.brand = brand;
+  // this.getName = () => {
+  //   console.log(`${this.brand} is amazing`);
+  // }
+}
+
+let volvo = new Truck('vx4');
+console.log(volvo['brand'] );
+
+Truck.prototype.getName = function() {
+  return this.brand;
+};
+console.log(volvo.toString());
+console.log(volvo.getName());
+let scania = new Truck("gm2");
+console.log(scania.getName());
+
+Truck.prototype.setName = function(name){
+  this.brand = name;
+}
+
+volvo.setName("xc80");
+console.log(volvo.getName());
