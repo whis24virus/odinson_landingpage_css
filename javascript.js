@@ -448,103 +448,111 @@
 
 
 
-///object An object is a collection of key/value pairs or properties. When the value is a function, the property becomes a method. Typically, you use methods to describe the object behaviors.
+// ///object An object is a collection of key/value pairs or properties. When the value is a function, the property becomes a method. Typically, you use methods to describe the object behaviors.
 
 
-let person = {
-  firstName: 'keshav',
-  lastName: 'Mehta',
-  greet(){console.log("yo yo ma" + " " + this.firstName)},
-}
-person.greet();
-
-person.greet = () => {console.log("yo ma"+" "+this.lastName)
-};
-
-person.greet();
-
-//create objects with constructor
-
-function Cars(name, power, type){
-  this.name = name;
-  this.power = power;
-  this.type = type;
-}
-
-let audi = new Cars('r8','770','supercar');
-console.log(audi['name']);
-let lamborghini = new Cars('aventador','1000','hypercar');
-console.log(lamborghini['name']);
-audi.classs = () => {
-  console.log(audi['name']+" "+audi['power']+" "+audi['type']);
-}
-audi.classs();
-
-
-
-
-
-
-//constructor function to create and object
-function Truck(brand) {
-  this.brand = brand;
-  // this.getName = () => {
-  //   console.log(`${this.brand} is amazing`);
-  // }
-}
-
-let volvo = new Truck('vx4');
-console.log(volvo['brand'] );
-
-Truck.prototype.getName = function() {
-  return this.brand;
-};
-console.log(volvo.toString());
-console.log(volvo.getName());
-let scania = new Truck("gm2");
-console.log(scania.getName());
-
-Truck.prototype.setName = function(name){
-  this.brand = name;
-}
-
-volvo.setName("xc80");
-console.log(volvo.getName());
-
-let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13];
-
-// function fun(){
-//   for(let i = 0; i < arr.length; i++){
-//     console.log(arr[i]);
-//   }
+// let person = {
+//   firstName: 'keshav',
+//   lastName: 'Mehta',
+//   greet(){console.log("yo yo ma" + " " + this.firstName)},
 // }
-// fun();
+// person.greet();
 
+// person.greet = () => {console.log("yo ma"+" "+this.lastName)
+// };
 
-// // never do this 
+// person.greet();
 
-// person.__proto__.getName = function(){
-//   return this.firstName;
+// //create objects with constructor
+
+// function Cars(name, power, type){
+//   this.name = name;
+//   this.power = power;
+//   this.type = type;
 // }
-// console.log(person.getName());
+
+// let audi = new Cars('r8','770','supercar');
+// console.log(audi['name']);
+// let lamborghini = new Cars('aventador','1000','hypercar');
+// console.log(lamborghini['name']);
+// audi.classs = () => {
+//   console.log(audi['name']+" "+audi['power']+" "+audi['type']);
+// }
+// audi.classs();
 
 
-function Bikes(name, type){
-  this.name = name;
-  this.type = type;
-}
 
 
-let ducati = new Bikes("monster","street");
 
-Bikes.prototype.getName = function(){
-  console.log(this.name);
-};
-Bikes.prototype.getType = function(){
-  console.log(this.type);
-};
 
-ducati.__proto__.__proto__ = volvo;
+// //constructor function to create and object
+// function Truck(brand) {
+//   this.brand = brand;
+//   // this.getName = () => {
+//   //   console.log(`${this.brand} is amazing`);
+//   // }
+// }
 
-let {name: brand} = ducati;
-console.log(brand);
+// let volvo = new Truck('vx4');
+// console.log(volvo['brand'] );
+
+// Truck.prototype.getName = function() {
+//   return this.brand;
+// };
+// console.log(volvo.toString());
+// console.log(volvo.getName());
+// let scania = new Truck("gm2");
+// console.log(scania.getName());
+
+// Truck.prototype.setName = function(name){
+//   this.brand = name;
+// }
+
+// volvo.setName("xc80");
+// console.log(volvo.getName());
+
+// let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+
+// // function fun(){
+// //   for(let i = 0; i < arr.length; i++){
+// //     console.log(arr[i]);
+// //   }
+// // }
+// // fun();
+
+
+// // // never do this 
+
+// // person.__proto__.getName = function(){
+// //   return this.firstName;
+// // }
+// // console.log(person.getName());
+
+
+// function Bikes(name, type){
+//   this.name = name;
+//   this.type = type;
+// }
+
+
+// let ducati = new Bikes("monster","street");
+
+// Bikes.prototype.getName = function(){
+//   console.log(this.name);
+// };
+// Bikes.prototype.getType = function(){
+//   console.log(this.type);
+// };
+
+// ducati.__proto__.__proto__ = volvo;
+
+// let {name: brand} = ducati;
+// console.log(brand);
+
+
+
+
+//classes 
+
+
+
