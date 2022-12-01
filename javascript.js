@@ -510,3 +510,41 @@ Truck.prototype.setName = function(name){
 
 volvo.setName("xc80");
 console.log(volvo.getName());
+
+let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+
+// function fun(){
+//   for(let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
+//   }
+// }
+// fun();
+
+
+// // never do this 
+
+// person.__proto__.getName = function(){
+//   return this.firstName;
+// }
+// console.log(person.getName());
+
+
+function Bikes(name, type){
+  this.name = name;
+  this.type = type;
+}
+
+
+let ducati = new Bikes("monster","street");
+
+Bikes.prototype.getName = function(){
+  console.log(this.name);
+};
+Bikes.prototype.getType = function(){
+  console.log(this.type);
+};
+
+ducati.__proto__.__proto__ = volvo;
+
+let {name: brand} = ducati;
+console.log(brand);
